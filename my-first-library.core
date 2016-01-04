@@ -1,0 +1,52 @@
+(ns my-first-library.core)
+
+(defn foo
+  "I don't do a whole lot."
+  [x]
+  (println x "Hello, World!"))
+
+(defn is-prime [n]
+    (nil?
+        (some #(= (mod n %) 0)
+            (range 2 (inc(java.lang.Math/sqrt n))))))
+
+(defn primes [ceiling]
+    (filter #(is-prime %)
+        (range 1 ceiling)))
+
+(defn is-pyth [a b c ]
+    nil? (= (+ (* a a) (* b b)) (* c c)))
+
+(defn is-pyth-triple [ a b c]
+  nil? (= ( + a b ) c))
+
+(defn gen-sq [ceiling]
+  (range 1 ceiling))
+
+(defn generate-triple [n]
+  (loop [m (inc n)]
+    (let [a (- (* m m) (* n n))
+          b (* 2 (* m n)) c (+ (* m m) (* n n)) sum (+ a b c)]
+      (if (>= sum 1000)
+        [a b c sum]
+        (recur (inc m))))))
+                                                                                      
+;; nice example
+(defn sum-up-with-recur [coll result]
+        (if (empty? coll) result
+          (recur (rest coll) (+ result (first coll)))))
+
+;;(defn _loop [n]
+;;  (loop [m (inc n)]))
+
+(defn _loop [x]
+  (when (> x 1)
+    (println x)
+    (recur (- x 2))))
+
+
+(defn add-sq [a b]
+    (println (* a a) (* b b))
+    (if (= a 0) nil
+      (recur (dec a) b)))
+
