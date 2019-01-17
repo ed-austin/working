@@ -1,4 +1,9 @@
 #!/usr/bin/python3.3
+# sql functions
+# currently, supports only sqlite
+# edit f_get_rdms to add new database vendors (ie, rdms)
+# 
+
 import os
 import sys
 import re
