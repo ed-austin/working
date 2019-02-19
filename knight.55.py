@@ -2,9 +2,9 @@
 #
 # Description:
 # script to print out allowable moves of a knight
-# which is on a specified squqre.
+# which is on a specified square.
 # Number the squares as below, then 
-# calculat each possible value
+# calculate each possible value
 # for the next move
 #
 
@@ -16,7 +16,7 @@
 #20 21 22 23 24 
 #
 # allowable spots from x (aka 12):
-# 1, 3, 5, 9, 15, 19, 21, 23)
+# 1, 3, 5, 9, 15, 19, 21, 23
 # which becomes following values to add to any position x,
 # but based on conditions such as falling off the board - 
 # ie, disallow if calculated spot < 0 or > 24 - see jumps5 
